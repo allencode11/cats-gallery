@@ -8,6 +8,7 @@ import {
 import HomeComponent from "./pages/home/home.tsx";
 import ProfileComponent from "./pages/profile/profile.tsx";
 import ErrorPage from "./pages/error/error.tsx";
+import NotFoundPage from "./pages/not-found/not-found.tsx";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,16 @@ const router = createBrowserRouter([
   {
     path: "/profile/:profileId",
     element: <ProfileComponent />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/profile",
+    element: <ErrorPage />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "*",
+    element: <NotFoundPage />,
     errorElement: <ErrorPage />
   },
 ]);

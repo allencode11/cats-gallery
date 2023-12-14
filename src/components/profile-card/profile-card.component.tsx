@@ -1,4 +1,3 @@
-
 type ProfileCardProps = {
   imageSrc: string,
   title: string,
@@ -6,6 +5,7 @@ type ProfileCardProps = {
   author: string,
 }
 export const ProfileCardComponent = ({ imageSrc, title, content, author }  : ProfileCardProps) => {
+
   return (
     <div className='flex flex-wrap justify-center items-center w-screen'>
       <div className='bg-cover bg-center mx-[60px] my-[35px] w-[500px] max-sm:w-[250px] max-sm:h-[320px] h-[575px] rounded-[15px]'
@@ -16,6 +16,6 @@ export const ProfileCardComponent = ({ imageSrc, title, content, author }  : Pro
         <div className='text-[40px] max-sm:text-[24px] mb-[20px] text-slate-50'>{content}</div>
         <div className='text-[32px] max-sm:text-[16px] w-[500px] max-sm:w-[300px] text-slate-500 text-right'>{author}</div>
       </div>
-    </div>
+  </div>
   )
 }
