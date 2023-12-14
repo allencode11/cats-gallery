@@ -10,7 +10,6 @@ type ApiData = {
 export default function HomeComponent() {
   const [data, setData] = useState<ApiData[]>([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
 
 
   useEffect( () => {
@@ -25,13 +24,14 @@ export default function HomeComponent() {
         setData(result);
       } catch (error) {
         throw new Error('Error while processing');
-        setError(error.message);
       } finally {
         setLoading(false);
       }
     };
 
     fetchData();
+    console.log(loading)
+
   }, []);
   return (
     <div className='bg-slate-800 min-h-screen text-slate-50 min-w-screen flex flex-col justify-center items-center'>
