@@ -11,7 +11,7 @@ export const BtnComponent = (btn: BtnProps) => {
   }
   return (
     <div
-      className={'bg-slate-700 text-[32px] w-[250px] h-[50px] rounded-[20px] flex ' +
+      className={'bg-slate-700 text-[32px] max-sm:text-[24px] w-[250px] h-[50px] max-sm:w-[200px] max-sm:h-[40px] rounded-[20px] flex ' +
         'justify-center items-center cursor-pointer text-[48px] absolute bottom-[-25px]'}
       onClick={redirectToLink}
     >{btn.text}</div>
