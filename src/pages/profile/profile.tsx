@@ -28,8 +28,10 @@ export default function ProfileComponent() {
 
   const { profileId } = useParams();
 
+  console.log('i render');
   useEffect( () => {
     const fetchData = async () => {
+      console.log('run use efect');
       try {
         setLoading(true);
         const response = await fetch('https://fakerapi.it/api/v1/custom?_quantity=1&customfield1=name&customfield2=word&customfield3=text');
@@ -55,7 +57,7 @@ export default function ProfileComponent() {
   },[]);
 
   return (
-    <div className='bg-slate-800 min-h-screen text-slate-50 min-w-screen flex flex-col justify-center items-center'>
+    <div className='bg-slate-800 min-h-screen text-slate-50 flex flex-col justify-center items-center p-[20px]'>
       {
         loading ? (
           <LoadingComponent />

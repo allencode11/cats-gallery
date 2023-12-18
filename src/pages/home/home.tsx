@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { ImageCardComponent } from "../../components/image-card/image-card.tsx";
-import {LoadingComponent} from "../../components/loading/loading.component.tsx";
+import { LoadingComponent } from "../../components/loading/loading.component.tsx";
 
 type ApiData = {
     id: string,
