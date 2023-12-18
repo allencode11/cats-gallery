@@ -57,12 +57,12 @@ export default function ProfileComponent() {
   },[]);
 
   return (
-    <div className='bg-slate-800 min-h-screen text-slate-50 flex flex-col justify-center items-center p-[20px]'>
+    <div className='bg-slate-800 min-h-screen max-w-screen text-slate-50 flex flex-col justify-center items-center p-[20px]'>
       {
         loading ? (
           <LoadingComponent />
         ) : (
-          <div>
+          <div className='flex justify-center items-center flex-col'>
             <div className='text-[160px] max-sm:text-[32px] text-center'>Cat {profileId} Profile</div>
             {
               profileData ? <ProfileCardComponent imageSrc={`https://cdn2.thecatapi.com/images/${profileId}.jpg`}
@@ -70,11 +70,10 @@ export default function ProfileComponent() {
                                   content={profileData.customfield3}
                                   author={profileData.customfield2}/> : null
             }
-
+            <BtnComponent text='Gallery' link='/' style=''></BtnComponent>
           </div>
         )
       }
-      <BtnComponent text='Gallery' link='/' style=''></BtnComponent>
     </div>
   )
 }
