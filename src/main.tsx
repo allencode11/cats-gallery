@@ -17,6 +17,11 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />
   },
   {
+    path: "/cats-gallery",
+    element: <HomeComponent />,
+    errorElement: <ErrorPage />
+  },
+  {
     path: "/profile/:profileId",
     element: <ProfileComponent />,
     errorElement: <ErrorPage />
