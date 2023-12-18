@@ -12,17 +12,17 @@ import NotFoundPage from "./pages/not-found/not-found.tsx";
 
 const router = createBrowserRouter([
   {
-    path: "/cats-gallery",
+    path: "/",
     element: <HomeComponent />,
     errorElement: <ErrorPage />
   },
   {
-    path: "/cats-gallery/profile/:profileId",
+    path: "/profile/:profileId",
     element: <ProfileComponent />,
     errorElement: <ErrorPage />
   },
   {
-    path: "/cats-gallery/home",
+    path: "/home",
     element: <HomeComponent />,
     errorElement: <ErrorPage />
   },
